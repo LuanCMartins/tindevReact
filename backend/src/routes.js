@@ -1,15 +1,15 @@
 const express = require('express');
+const devController = require('./controllers/DevController');
+const LikeController = require('./controllers/LikeController');
+const DislikeController = require('./controllers/DislikeController');
+const DevController = require('./controllers/DevController');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-    return res.json({ message : `Olá, ${req.query.name}`});
-});
+routes.get('/devs', DevController.index)
 
-routes.post('/devs', (req, res) => {
-    return res.json(req.body);
-});
+routes.post('/devs', devController.store);
+routes.post('/devs/:devId/likes', LikeController.store);
+routes.post('/devs/:devId/dislikes', DislikeController.store);
 
 module.exports = routes;
-
-//26 minutos video 02
