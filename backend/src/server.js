@@ -6,7 +6,7 @@ const routes = require('./routes');
 
 const server = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@tindevcluster.kfr6i.mongodb.net/omnistack8?retryWrites=true&w=majority',{
+mongoose.connect('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',{
     useNewUrlParser: true
 });
 
